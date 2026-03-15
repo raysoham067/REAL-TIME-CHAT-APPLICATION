@@ -110,34 +110,7 @@ From **`backend/`** only:
 
 ---
 
-## Auth Flow
 
-```
-User clicks "Register" or "Sign In"
-        │
-        ▼
-POST /api/auth/register  or  POST /api/auth/login
-        │
-        ▼
-Response: { user, accessToken (15m), refreshToken (7d) }
-        │
-        ├─ storeTokens() ← tokens in memory (never localStorage)
-        ├─ scheduleRefresh() ← silent refresh 60s before expiry
-        │
-        ▼
-io({ auth: { token: accessToken } })
-        │
-        ▼
-socketAuthMiddleware verifies JWT on handshake
-        │
-        ▼
-socket.emit('user:join', { roomId: 'general' })
-        │
-        ▼
-Identity = JWT claims (username, id) — client cannot spoof
-```
-
----
 
 ## Environment Variables
 
