@@ -1,0 +1,17 @@
+{
+  "name": "relay-chat-frontend",
+  "version": "2.1.0",
+  "description": "Relay chat frontend — Vite + vanilla JS",
+  "type": "module",
+  "scripts": {
+    "dev":     "vite --port 5173",
+    "build":   "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "vite": "^5.3.1"
+  }
+}

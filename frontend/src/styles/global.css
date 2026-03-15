@@ -1,0 +1,110 @@
+:root{
+  --bg:#0c0c10;
+  --surface:#13131a;
+  --panel:rgba(26,26,36,.75);
+  --border:#2a2a38;
+
+  --accent-solid:#7c6aff;
+  --accent2:#ff6a8e;
+
+  --accent-gradient:linear-gradient(135deg,#7c6aff,#9b8bff);
+
+  --green:#3dffa0;
+  --red:#ff4f6a;
+
+  --text:#e8e6f0;
+  --muted:#6b6882;
+
+  --bubble-me:#1e1b3a;
+  --bubble-ot:#18181f;
+
+  --mono:'DM Mono', monospace;
+  --sans:'Syne', sans-serif;
+
+  --radius:14px;
+  --anim:cubic-bezier(.22,1,.36,1);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  height:100%;
+}
+
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--text);
+  height:100dvh;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+#app{
+  height:100dvh;
+  display:flex;
+}
+
+/* scrollbars */
+
+::-webkit-scrollbar{
+  width:6px;
+}
+
+::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(#7c6aff,#9b8bff);
+  border-radius:10px;
+}
+
+/* animations */
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes slideUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes msgIn{
+  from{
+    opacity:0;
+    transform:translateY(8px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1}
+  50%{opacity:.4}
+}
+
+@keyframes bounce{
+  0%,60%,100%{transform:translateY(0)}
+  30%{transform:translateY(-4px)}
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}

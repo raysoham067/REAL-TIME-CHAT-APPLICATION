@@ -1,0 +1,25 @@
+node_modules/
+
+# Environment secrets — never commit
+.env
+.env.local
+.env.*.local
+
+# Build output
+frontend/dist/
+frontend/.vite/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
